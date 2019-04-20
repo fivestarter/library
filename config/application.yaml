@@ -1,0 +1,10 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /wpng/api
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
