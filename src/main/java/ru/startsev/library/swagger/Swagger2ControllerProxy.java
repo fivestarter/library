@@ -31,7 +31,7 @@ public class Swagger2ControllerProxy {
     }
 
     @RequestMapping(
-            value = "/api-docs",
+            value = "${springfox.documentation.swagger.v2.path}",
             method = RequestMethod.GET,
             produces = { APPLICATION_JSON_VALUE, HAL_MEDIA_TYPE })
     @ResponseBody
