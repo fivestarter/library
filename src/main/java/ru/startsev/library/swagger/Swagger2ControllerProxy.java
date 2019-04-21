@@ -17,7 +17,7 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 @Controller
 @ApiIgnore
-@RequestMapping("/v1/announcements")
+@RequestMapping("${springfox.documentation.swagger.v2.prefix}")
 public class Swagger2ControllerProxy {
 
     private static final String HAL_MEDIA_TYPE = "application/hal+json";

@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 @ApiIgnore
-@RequestMapping("/v1/announcements/swagger-resources")
+@RequestMapping("${springfox.documentation.swagger.v2.prefix}/swagger-resources")
 public class ApiResourceControllerProxy {
 
     private ApiResourceController apiResourceController;

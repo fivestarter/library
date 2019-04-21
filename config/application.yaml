@@ -8,3 +8,4 @@ springfox:
     swagger:
       v2:
         path: /api-docs
+        prefix: /v1/announcements
