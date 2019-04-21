@@ -1,5 +1,6 @@
 package ru.startsev.library.swagger;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @ComponentScan("springfox")
 public class SpringFoxConfig extends WebMvcConfigurationSupport {
 
+    @Value("${springfox.documentation.swagger.v2.prefix}")
+    private String prefix;
+
     @Bean
     public Docket apiDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -27,7 +31,7 @@ public class SpringFoxConfig extends WebMvcConfigurationSupport {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/v1/announcements/swagger-ui.html**").addResourceLocations("classpath:/META-INF/resources/swagger-ui.html");
-        registry.addResourceHandler("/v1/announcements/**").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler(prefix + "/swagger-ui.html**").addResourceLocations("classpath:/META-INF/resources/swagger-ui.html");
+        registry.addResourceHandler(prefix + "/**").addResourceLocations("classpath:/META-INF/resources/");
     }
 }
