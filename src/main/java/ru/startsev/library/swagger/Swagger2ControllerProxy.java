@@ -1,4 +1,4 @@
-package ru.startsev.library;
+package ru.startsev.library.swagger;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Strings;

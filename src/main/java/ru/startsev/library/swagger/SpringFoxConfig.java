@@ -1,4 +1,4 @@
-package ru.startsev.library;
+package ru.startsev.library.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
